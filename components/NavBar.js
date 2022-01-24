@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, SafeAreaView, View, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import PropTypes from 'prop-types';
+import Colors from '../theme/Colors';
 
 const propTypes = {
   main: PropTypes.bool
@@ -20,13 +21,13 @@ class NavBar extends React.PureComponent {
           <View style={styles.mainNav}>
             <Image style={styles.logo} source={require('../assets/images/movies.png')}/>
             <TouchableOpacity onPress={() => {navigation.navigate('Search')}}>
-              <Icon name={'search-outline'} size={30} color={'#000'}/>
+              <Icon name={'search-outline'} size={30} color={Colors.black}/>
             </TouchableOpacity>
           </View>
         ) : (
           <View>
             <TouchableOpacity onPress={() => {navigation.goBack()}}>
-              <Icon name={'chevron-back'} size={35} color={'#000'} />
+              <Icon name={'chevron-back'} size={35} color={Colors.black} />
             </TouchableOpacity>
           </View>
         )}
